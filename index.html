@@ -3,70 +3,136 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Yuxi (Katherine) Cai | USC PhD Student</title>
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300italic,700,700italic">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/milligram/1.4.1/milligram.css">
+    <title>Yuxi (Katherine) Cai | USC</title>
     <style>
-        body { margin: 50px auto; max-width: 900px; padding: 20px; }
-        .header { border-bottom: 2px solid #9b4dca; margin-bottom: 30px; padding-bottom: 20px; }
-        .sidebar { background: #f4f5f6; padding: 20px; border-radius: 5px; text-align: center; }
-        .sidebar p, .sidebar h3 { text-align: left; }
-        .profile-pic { width: 180px; height: 180px; border-radius: 50%; object-fit: cover; margin-bottom: 20px; border: 3px solid #9b4dca; display: inline-block; }
-        h3 { margin-top: 0; }
-        .badge { background: #9b4dca; color: white; padding: 2px 8px; border-radius: 3px; font-size: 0.8em; }
-        .pub-title { font-weight: bold; }
+        /* 核心排版与系统级字体 */
+        body { 
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; 
+            color: #333; 
+            line-height: 1.6; 
+            margin: 0; 
+            padding: 0; 
+            background-color: #fff; 
+        }
+        
+        /* 响应式两栏容器 */
+        .container { 
+            max-width: 960px; 
+            margin: 80px auto; 
+            padding: 0 30px; 
+            display: flex; 
+            flex-wrap: wrap; 
+            gap: 60px; 
+        }
+
+        /* 左侧栏：个人资料 */
+        .profile-col { 
+            flex: 1; 
+            min-width: 250px; 
+            text-align: center; 
+        }
+        .profile-pic { 
+            width: 200px; 
+            height: 200px; 
+            border-radius: 50%; 
+            object-fit: cover; 
+            margin-bottom: 25px; 
+            border: 1px solid #eaeaea; /* 非常浅的边框增加质感 */
+        }
+        .name { 
+            font-size: 2.2em; 
+            font-weight: 300; /* 细体名字，极简精髓 */
+            margin: 0 0 8px 0; 
+            color: #24292e;
+            letter-spacing: -0.5px;
+        }
+        .title { 
+            font-size: 1em; 
+            color: #6a737d; 
+            margin: 0 0 15px 0; 
+            font-weight: 400; 
+        }
+        .contact-link { 
+            color: #0366d6; 
+            text-decoration: none; 
+            font-size: 0.95em; 
+        }
+        .contact-link:hover { 
+            text-decoration: underline; 
+        }
+
+        /* 右侧栏：学术内容 */
+        .content-col { 
+            flex: 2.2; 
+            min-width: 300px; 
+        }
+        .section-title { 
+            font-size: 1.2em; 
+            font-weight: 600; 
+            color: #24292e; 
+            margin-top: 0; 
+            margin-bottom: 15px; 
+        }
+        /* 增加段落和列表的留白 */
+        .content-col p { margin-bottom: 25px; font-size: 1em; color: #444; }
+        .content-col ul { padding-left: 20px; margin-bottom: 35px; }
+        .content-col li { margin-bottom: 12px; color: #444; }
+        
+        /* 强调出版物标题 */
+        .pub-title { font-weight: 600; color: #24292e; }
+        .journal { font-style: italic; }
+        .highlight { color: #24292e; font-weight: 500; }
+
+        /* 移动端适配 */
+        @media (max-width: 768px) {
+            .container { flex-direction: column; margin: 40px auto; gap: 40px; }
+            .profile-col { text-align: center; border-right: none; }
+        }
     </style>
 </head>
 <body>
 
 <div class="container">
-    <div class="row header">
-        <div class="column">
-            <h1>Yuxi Cai </h1>
-            <p><strong>Ph.D. in Population, Health and Place </strong><br>
-            University of Southern California, Dornsife College of Letters, Arts and Sciences | <a href="mailto:yuxicai@usc.edu">yuxicai@usc.edu </a></p>
-        </div>
+    <div class="profile-col">
+        <img src="profile.jpg" alt="Yuxi Cai" class="profile-pic">
+        <h1 class="name">Yuxi Cai</h1>
+        <p class="title">Ph.D. Student in Population, Health and Place<br>USC</p>
+        <p><a href="mailto:yuxicai@usc.edu" class="contact-link">yuxicai@usc.edu</a></p>
     </div>
 
-    <div class="row">
-        <div class="column column-60">
-            <h3>About</h3>
-            <p>I am a Ph.D. student co-trained at the Dornsife Spatial Sciences Institute, Department of Sociology & Keck Department of Population and Public Health Sciences at USC. Advised by Dr. John P. Wilson and Dr. Megan M. Herting [cite: 6], my research focuses on Health Geography, Environmental Perception, Mental Health, and GeoAI Applications[cite: 7].</p>
+    <div class="content-col">
+        
+        <h2 class="section-title">About me</h2>
+        <p>I am a Ph.D. student co-trained at the Dornsife Spatial Sciences Institute, Department of Sociology & Keck Department of Population and Public Health Sciences at the University of Southern California. Advised by Dr. John P. Wilson and Dr. Megan M. Herting, my research focuses on Health Geography, Environmental Perception, Mental Health, and GeoAI Applications.</p>
+        
+        <h2 class="section-title">Publications</h2>
+        <ul>
+            <li><span class="pub-title">The linkage between microbial community dynamics and urbanization age</span><br>
+            Jia, Y., Wu, J., Shi, X., ... <span class="highlight">Cai, Y.</span>, et al. (2026). <span class="journal">Nature Sustainability</span>. (Accepted)</li>
             
-            <h3>Publications</h3>
-            <ul>
-                <li><span class="pub-title">The linkage between microbial community dynamics and urbanization age.</span><br>
-                Jia, Y., Wu, J., Shi, X., ... <strong>Cai, Y.</strong>, et al. (2026). <em>Nature Sustainability</em>. (Accepted) </li>
-                
-                <li><span class="pub-title">Physical environment and loneliness across cultures: A scoping review.</span><br>
-                <strong>Cai, Y.</strong>, & Wilson, J. P. (2025). <em>Health & Place</em>, 96, 103553.</li>
-                
-                <li><span class="pub-title">The effect of greenness on ESKAPE pathogen reduction and its heterogeneity across global climate zones and urbanization gradient.</span><br>
-                Wang, L., Jia, Y., Wu, J., <strong>Cai, Y.</strong>, et al. (2023). <em>Urban Forestry & Urban Greening</em>, 87, 128048.</li>
-            </ul>
+            <li><span class="pub-title">Physical environment and loneliness across cultures: A scoping review</span><br>
+            <span class="highlight">Cai, Y.</span>, & Wilson, J. P. (2025). <span class="journal">Health & Place</span>, 96, 103553.</li>
+            
+            <li><span class="pub-title">The effect of greenness on ESKAPE pathogen reduction and its heterogeneity across global climate zones and urbanization gradient</span><br>
+            Wang, L., Jia, Y., Wu, J., <span class="highlight">Cai, Y.</span>, et al. (2023). <span class="journal">Urban Forestry & Urban Greening</span>, 87, 128048.</li>
+        </ul>
 
-            <h3>Conference Presentations</h3>
-            <ul>
-                <li><strong>Cai, Y.</strong>, & Wilson, J. P. (2026, March). Physical environment and loneliness across cultures: A scoping review. <em>Paper to be presented at the American Association of Geographers (AAG) Annual Meeting, San Francisco, CA.</em></li>
-                <br>
-                <li><strong>Cai, Y.</strong>, Wang, L., & Jiang, F. (2022, September). "A Comparative Study on the Adaptability of Health Impact Assessment Tools towards Urban Planning". <em>5th World Planning Schools Congress-16th Asian Planning Schools Association Congress, Bali, Indonesia.</em></li>
-            </ul>
-        </div>
+        <h2 class="section-title">Conference Presentations</h2>
+        <ul>
+            <li><span class="pub-title">Physical environment and loneliness across cultures: A scoping review</span><br>
+            <span class="highlight">Cai, Y.</span>, & Wilson, J. P. (2026, March). Paper to be presented at the American Association of Geographers (AAG) Annual Meeting, San Francisco, CA.</li>
+            
+            <li><span class="pub-title">A Comparative Study on the Adaptability of Health Impact Assessment Tools towards Urban Planning</span><br>
+            <span class="highlight">Cai, Y.</span>, Wang, L., & Jiang, F. (2022, September). 5th World Planning Schools Congress-16th Asian Planning Schools Association Congress, Bali, Indonesia.</li>
+        </ul>
 
-        <div class="column column-40 sidebar">
-            <img src="profile.jpg" alt="Yuxi (Katherine) Cai" class="profile-pic">
-            
-            <h3>Skills</h3>
-            <p><span class="badge">Spatial</span> ArcGIS Pro, QGIS, GeoDa </p>
-            <p><span class="badge">Statistical</span> R, Python, SPSS </p>
-            <p><span class="badge">Modelling</span> CAD, SketchUp, Rhino, Lumion </p>
-            
-            <h3>Education</h3>
-            <p><strong>Ph.D. in Population, Health and Place [cite: 5]</strong><br>University of Southern California </p>
-            <p><strong>Master of Town and Country Planning Engineering [cite: 10]</strong><br>Tongji University </p>
-            <p><strong>Bachelor of Architecture </strong><br>Hunan University </p>
-        </div>
+        <h2 class="section-title">Education & Skills</h2>
+        <ul>
+            <li><strong>Education:</strong> Ph.D. in Population, Health and Place (USC, Expected) | Master of Town and Country Planning Engineering (Tongji University, 2024) | Bachelor of Architecture (Hunan University, 2021)</li>
+            <li><strong>Spatial Analysis:</strong> ArcGIS Pro, QGIS, GeoDa</li>
+            <li><strong>Programming & Stats:</strong> R, Python, SPSS</li>
+            <li><strong>Design & Modelling:</strong> CAD, SketchUp, Rhino, Lumion</li>
+        </ul>
     </div>
 </div>
 
